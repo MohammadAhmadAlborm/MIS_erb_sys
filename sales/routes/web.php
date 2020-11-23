@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/blogSingle', function () {
+Route::get('/blog-single', function () {
     return view('blog-single');
 });
 
@@ -33,7 +33,7 @@ Route::get('/checkout', function () {
     return view('checkout');
 });
 
-Route::get('/contactus', function () {
+Route::get('/contact-us', function () {
     return view('contact-us');
 });
 
@@ -41,7 +41,7 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/productDetails', function () {
+Route::get('/product-details', function () {
     return view('product-details');
 });
 
