@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 class loginController extends Controller
 {
-    //
-    dsds
+    void main()
+    {
+        
+    }
 }
