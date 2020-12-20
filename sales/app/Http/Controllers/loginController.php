@@ -9,7 +9,7 @@ class loginController extends Controller
     //
 
     function login()
-    {
-        
-    }
+       {
+           
+       }
 }
