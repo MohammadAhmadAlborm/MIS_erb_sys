@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class loginController extends Controller
 {
-
-    
-
+    function login(){
+        
+    }
 }
 
