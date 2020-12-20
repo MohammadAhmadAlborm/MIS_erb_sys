@@ -112,14 +112,14 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="index.html">Home</a></li>
+								<li><a href="{{url('/')}}">Home</a></li>
 								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">Products</a></li>
-										<li><a href="product-details.html">Product Details</a></li> 
-										<li><a href="checkout.html">Checkout</a></li> 
-										<li><a href="cart.html">Cart</a></li> 
-										<li><a href="login.html" class="active">Login</a></li> 
+                                        <li><a href="{{url('shop')}}">Products</a></li>
+										<li><a href="{{url('product-details')}}">Product Details</a></li> 
+										<li><a href="{{url('checkout')}}">Checkout</a></li> 
+										<li><a href="{{'cart'}}">Cart</a></li> 
+										<li><a href="{{'login'}}" class="active">Login</a></li> 
                                     </ul>
                                 </li> 
 								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
@@ -146,12 +146,14 @@
 	<section id="form"><!--form-->
 		<div class="container">
 			<div class="row">
+
 				<div class="col-sm-4 col-sm-offset-1">
 					<div class="login-form"><!--login form-->
 						<h2>Login to your account</h2>
-						<form action="#">
-							<input type="text" placeholder="Name" />
-							<input type="email" placeholder="Email Address" />
+						<form action="login" method="POST">
+						@csrf
+							<input value="{{old('name')}}"   name = "name" type="text" placeholder="Name" />
+							<input value="{{old('email')}}" name="	" type="email" placeholder="Email Address" />
 							<span>
 								<input type="checkbox" class="checkbox"> 
 								Keep me signed in

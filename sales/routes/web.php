@@ -53,3 +53,5 @@ Route::get('/shop', function () {
 
 
 Route::post('registeration',[signupController::class,'registeration']);
+
+Route::post('login',[signupController::class,'login']);

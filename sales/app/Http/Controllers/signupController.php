@@ -11,15 +11,15 @@ class signupController extends Controller
 
     function login(Request $re)
     {
-        $email=$re->input('name');
-        $password=$re->input('email');
+        $name=$re->input('name');
+        $email=$re->input('email');
 
 
-        $checklogin=DB::table('signup')->where(['name'=>$name,'email'=>$email])
+        $checklogin=DB::table('users')->where(['name'=>$name,'email'=>$email])
         ->get();
         if(count($checklogin)>0)
         {
-            return redirect('adminOperation');
+            return redirect('/');
         }
         else{
             return back()->with('fail','Failed Login');
@@ -35,7 +35,7 @@ class signupController extends Controller
                 'password'=>'required',
             ]
         );
-        $query=DB::table('signup')->insert(
+        $query=DB::table('users')->insert(
             [
             'name'=>$re->input('name'),
             'email'=>$re->input('email'),
