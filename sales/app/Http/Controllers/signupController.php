@@ -48,6 +48,6 @@ class signupController extends Controller
         }
         else{
             return back()->with('fail','Data not inserted ');
-            }
+        }
     }
 }
