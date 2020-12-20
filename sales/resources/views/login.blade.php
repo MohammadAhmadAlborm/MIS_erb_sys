@@ -121,7 +121,7 @@
 										<li><a href="{{'cart'}}">Cart</a></li> 
 										<li><a href="{{'login'}}" class="active">Login</a></li> 
                                     </ul>
-                                </li> 
+                                </li>
 								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
                                         <li><a href="{{url('/blog')}}">Blog List</a></li>

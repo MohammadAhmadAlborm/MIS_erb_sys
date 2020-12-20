@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\http\Controllers\signupController;
+use App\http\Controllers\messagesController;
+use App\http\Controllers\UserAuth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,3 +57,5 @@ Route::get('/shop', function () {
 Route::post('registeration',[signupController::class,'registeration']);
 
 Route::post('login',[signupController::class,'login']);
+Route::post('addMessage',[messagesController::class,'addMessage']);
+
