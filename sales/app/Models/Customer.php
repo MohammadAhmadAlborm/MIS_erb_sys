@@ -8,6 +8,7 @@ use Illuminate\Notifications\Notifiable;
 
 class Customer extends Authenticatable
 {
+    
     use HasFactory,Notifiable;
 
     protected $fillable = [
@@ -21,5 +22,6 @@ class Customer extends Authenticatable
         'password',
         'remember_token',
     ];
+    
 
 }

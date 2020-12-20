@@ -163,13 +163,25 @@
 				<div class="col-sm-1">
 					<h2 class="or">OR</h2>
 				</div>
+
+@if(Session::get('success'))
+  <div class="alert alert-success">
+    {{Session::get('success')}}
+  </div>
+@endif
+@if(Session::get('fail'))
+  <div class="alert alert-success">
+    {{Session::get('fail')}}
+  </div>
+@endif
 				<div class="col-sm-4">
 					<div class="signup-form"><!--sign up form-->
 						<h2>New User Signup!</h2>
-						<form action="#">
-							<input type="text" placeholder="Name"/>
-							<input type="email" placeholder="Email Address"/>
-							<input type="password" placeholder="Password"/>
+						<form action="registeration" method="POST">
+						@csrf
+							<input value="{{old('name')}}" name="name"type="text" placeholder="Name"/>
+							<input value="{{old('email')}}" name="email"type="email" placeholder="Email Address"/>
+							<input value="{{old('password')}}" name="password"type="password" placeholder="Password"/>
 							<button type="submit" class="btn btn-default">Signup</button>
 						</form>
 					</div><!--/sign up form-->

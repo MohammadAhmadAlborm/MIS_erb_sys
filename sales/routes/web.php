@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\http\Controllers\signupController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,3 +48,8 @@ Route::get('/product-details', function () {
 Route::get('/shop', function () {
     return view('shop');
 });
+
+
+
+
+Route::post('registeration',[signupController::class,'registeration']);

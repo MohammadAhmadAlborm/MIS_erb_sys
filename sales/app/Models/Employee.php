@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Employee extends Model
 {
+    
     use HasFactory;
     protected $fillable = [
         'username',
@@ -19,4 +20,5 @@ class Employee extends Model
         'password',
         'remember_token',
     ];
+
 }
