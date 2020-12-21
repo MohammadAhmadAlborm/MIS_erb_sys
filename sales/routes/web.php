@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\http\Controllers\signupController;
 use App\http\Controllers\messagesController;
+use App\http\Controllers\shopController;
 use App\http\Controllers\UserAuth;
 /*
 |--------------------------------------------------------------------------
@@ -57,5 +58,6 @@ Route::get('/shop', function () {
 Route::post('registeration',[signupController::class,'registeration']);
 
 Route::post('login',[signupController::class,'login']);
-Route::post('addMessage',[messagesController::class,'addMessage']);
+Route::post('/addMessage',[messagesController::class,'addMessage']);
+Route::get('/shop',[shopController::class,'getCategory']);
 
