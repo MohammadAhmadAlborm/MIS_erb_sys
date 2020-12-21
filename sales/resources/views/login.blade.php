@@ -153,7 +153,7 @@
 						<form action="login" method="POST">
 						@csrf
 							<input value="{{old('name')}}"   name = "name" type="text" placeholder="Name" />
-							<input value="{{old('email')}}" name="	" type="email" placeholder="Email Address" />
+							<input value="{{old('email')}}" name="email" type="email" placeholder="Email Address" />
 							<span>
 								<input type="checkbox" class="checkbox"> 
 								Keep me signed in
